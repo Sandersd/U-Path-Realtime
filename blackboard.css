@@ -4,15 +4,60 @@ body {
 	text-align: center;
 	background-color: "rgba(52, 77, 208, 0.61)"
 }
-input {
+
+.btn {
 	position: fixed;
-	top: 1em;
-	right: 1em;
+	top: 80%;
+	left: 45%;
+	font-size: 3em;
 }
 
+
+.send {
+	position: fixed;
+	top: 20%;
+	left: 75%;
+	font-size: 3em;
+}
+
+.btn {
+  background: #61b4eb;
+  background-image: -webkit-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -moz-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -ms-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -o-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: linear-gradient(to bottom, #61b4eb, #0f6194);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 11em;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10em;
+  padding: 5px 15px 5px 15px;
+  border: solid #0d507a 1px;
+  text-decoration: none;
+}
+
+.btn2 {
+  background: #61b4eb;
+  background-image: -webkit-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -moz-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -ms-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: -o-linear-gradient(top, #61b4eb, #0f6194);
+  background-image: linear-gradient(to bottom, #61b4eb, #0f6194);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 6em;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 4em;
+  padding: 10px 20px 10px 20px;
+  border: solid #0d507a 1px;
+  text-decoration: none;
+}
 canvas {
-	
-  background:url("upath2.png");
+
+  background:url("upathmap.jpg");
   background-position: center;
 	background-repeat: no-repeat;
 

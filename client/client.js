@@ -1,4 +1,14 @@
 Meteor.startup(function() {
+	Session.set('mode', false);
+
+
+
+	Template.map.helpers({
+		mode: function(){
+			 return Session.get('mode');
+		}
+	});
+
 
 
 
@@ -19,7 +29,7 @@ Meteor.startup(function() {
 		drawing = true;
 		from = {x: parseInt(event.gesture.center.pageX), y: parseInt(event.gesture.center.pageY)};
 
-	}).on('dragend', function() {
+	}).on('dragend', function(event) {
 		event.preventDefault();
 
 		drawing = false;
@@ -38,8 +48,15 @@ Meteor.startup(function() {
 		from = to;
 	});
 
-	$('input').click(function() {
+	$('.btn').click(function() {
 		Meteor.call('wipeClean');
+		wipe(ctx);
+	});
+
+	
+
+	$('.send').click(function() {
+		alert("Send coming soon!");
 	});
 
 	function drawLine(ctx, from, to) {
@@ -47,18 +64,18 @@ Meteor.startup(function() {
 		ctx.beginPath();
 		ctx.moveTo(from.x, from.y);
 		ctx.lineTo(to.x, to.y);
-		ctx.lineWidth = 3;
+		ctx.lineWidth = 6;
 		ctx.closePath();
 		ctx.stroke();
 	}
 
 	function wipe(ctx) {
 		//ctx.fillRect(0, 0, canvas.width(), canvas.height());
-		cxt.clearRect(0, 0, canvas.width(), canvas.height());
+		ctx.clearRect(0, 0, canvas.width(), canvas.height());
 	}
 
-	ctx.strokeStyle = '#225303';
-	//ctx.fillStyle = "url('http://www.pinecreekvillage.net/images/siteplanmap.jpg')";
+	ctx.strokeStyle = '#f47cef';
+	ctx.fillStyle = "url('upathmap.jpg')";
 
 
 	Meteor.autorun(function() {
@@ -71,7 +88,7 @@ Meteor.startup(function() {
 	});
 
 	// Stop iOS from doing the bounce thing with the screen
-	document.ontouchmove = function(event){
+	$document.ontouchmove = function(event){
 		event.preventDefault();
 	};
 });

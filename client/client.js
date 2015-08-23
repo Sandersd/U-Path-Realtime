@@ -1,6 +1,7 @@
 Meteor.startup(function() {
 
 
+
 	var canvas = $('canvas'),
 		ctx = canvas[0].getContext('2d'),
 		drawing = false,
@@ -13,15 +14,18 @@ Meteor.startup(function() {
 		height: $(window).height()
 
 	}).hammer().on('dragstart', function(event) {
+		event.preventDefault();
 
 		drawing = true;
 		from = {x: parseInt(event.gesture.center.pageX), y: parseInt(event.gesture.center.pageY)};
 
 	}).on('dragend', function() {
+		event.preventDefault();
 
 		drawing = false;
 
 	}).on('drag', function(event) {
+		event.preventDefault();
 
 		if(!drawing) return;
 
@@ -43,16 +47,17 @@ Meteor.startup(function() {
 		ctx.beginPath();
 		ctx.moveTo(from.x, from.y);
 		ctx.lineTo(to.x, to.y);
+		ctx.lineWidth = 3;
 		ctx.closePath();
 		ctx.stroke();
 	}
 
 	function wipe(ctx) {
 		//ctx.fillRect(0, 0, canvas.width(), canvas.height());
-		context.clearRect(0, 0, canvas.width(), canvas.height());
+		cxt.clearRect(0, 0, canvas.width(), canvas.height());
 	}
 
-	ctx.strokeStyle = '#000000';
+	ctx.strokeStyle = '#225303';
 	//ctx.fillStyle = "url('http://www.pinecreekvillage.net/images/siteplanmap.jpg')";
 
 
@@ -68,5 +73,5 @@ Meteor.startup(function() {
 	// Stop iOS from doing the bounce thing with the screen
 	document.ontouchmove = function(event){
 		event.preventDefault();
-	}
+	};
 });

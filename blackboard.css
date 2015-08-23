@@ -1,10 +1,20 @@
 body {
 	margin: 0;
 	overflow: hidden;
-	background-color: red;
+	text-align: center;
+	background-color: "rgba(52, 77, 208, 0.61)"
 }
 input {
 	position: fixed;
 	top: 1em;
 	right: 1em;
+}
+
+canvas {
+	
+  background:url("upath2.png");
+  background-position: center;
+	background-repeat: no-repeat;
+
+
 }

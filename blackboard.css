@@ -9,13 +9,13 @@ body {
 	position: fixed;
 	top: 80%;
 	left: 45%;
-	font-size: 3em;
+
 }
 
 
 .send {
 	position: fixed;
-	top: 20%;
+	top: 80%;
 	left: 75%;
 	font-size: 3em;
 }
@@ -27,13 +27,11 @@ body {
   background-image: -ms-linear-gradient(top, #61b4eb, #0f6194);
   background-image: -o-linear-gradient(top, #61b4eb, #0f6194);
   background-image: linear-gradient(to bottom, #61b4eb, #0f6194);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 11em;
+
   font-family: Arial;
   color: #ffffff;
-  font-size: 10em;
-  padding: 5px 15px 5px 15px;
+  font-size: 100px;
+  padding: 0px 20px 0px 20px;
   border: solid #0d507a 1px;
   text-decoration: none;
 }

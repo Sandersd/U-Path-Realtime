@@ -53,7 +53,7 @@ Meteor.startup(function() {
 		wipe(ctx);
 	});
 
-	
+
 
 	$('.send').click(function() {
 		alert("Send coming soon!");
@@ -74,8 +74,8 @@ Meteor.startup(function() {
 		ctx.clearRect(0, 0, canvas.width(), canvas.height());
 	}
 
-	ctx.strokeStyle = '#f47cef';
-	ctx.fillStyle = "url('upathmap.jpg')";
+	ctx.strokeStyle = '#d60d0d';
+	ctx.fillStyle = "url('ucimap.jpg')";
 
 
 	Meteor.autorun(function() {
